@@ -13,6 +13,10 @@ import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
@@ -40,9 +44,11 @@ fun ProfilesScreen(
     modifier: Modifier = Modifier,
     viewModel: ProfilesViewModel = hiltViewModel()
 ) {
+    var isPtrLoading by rememberSaveable { mutableStateOf(false) }
+
     val pagingUsers = viewModel.users.collectAsLazyPagingItems()
     val snackBarNotifier = LocalMessageNotifier.current
-    val isRefreshing = pagingUsers.loadState.refresh is LoadState.Loading
+    val isRefreshing = isPtrLoading && pagingUsers.loadState.refresh is LoadState.Loading
     val pullRefreshState = rememberPullToRefreshState()
 
     val unknownHostExceptionText = stringResource(R.string.no_internet_connection)
@@ -72,6 +78,12 @@ fun ProfilesScreen(
         }
     }
 
+    LaunchedEffect(pagingUsers.loadState.refresh) {
+        if (pagingUsers.loadState.refresh !is LoadState.Loading) {
+            isPtrLoading = false
+        }
+    }
+
     Scaffold(
         modifier = modifier,
         topBar = {
@@ -87,6 +99,7 @@ fun ProfilesScreen(
             isRefreshing = isRefreshing,
             state = pullRefreshState,
             onRefresh = {
+                isPtrLoading = true
                 pagingUsers.refresh()
             }
         ) {

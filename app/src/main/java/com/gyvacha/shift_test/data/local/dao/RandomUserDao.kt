@@ -20,4 +20,7 @@ interface RandomUserDao {
 
     @Query("DELETE FROM random_users")
     suspend fun clearAll()
+
+    @Query("SELECT COUNT(*) FROM random_users")
+    suspend fun count(): Int
 }

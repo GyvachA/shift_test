@@ -63,4 +63,12 @@ class RandomUserRemoteMediator(
             MediatorResult.Error(e)
         }
     }
+
+    override suspend fun initialize(): InitializeAction {
+        return if (userDao.count() > 0) {
+            InitializeAction.SKIP_INITIAL_REFRESH
+        } else {
+            InitializeAction.LAUNCH_INITIAL_REFRESH
+        }
+    }
 }
