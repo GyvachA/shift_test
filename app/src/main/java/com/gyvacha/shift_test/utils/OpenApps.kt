@@ -12,7 +12,7 @@ fun openDialer(phoneNumber: String, context: Context) {
 }
 
 fun openMap(latitude: Double, longitude: Double, context: Context) {
-    val uri = "geo:$latitude,$longitude".toUri()
+    val uri = "geo:$latitude,$longitude?q=$latitude,$longitude".toUri()
     val intent = Intent(Intent.ACTION_VIEW).apply {
         data = uri
     }
