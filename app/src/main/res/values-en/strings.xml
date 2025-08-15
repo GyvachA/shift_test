@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_photo">Profile photo</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="query_timeout">Server timeout exceeded</string>
+    <string name="http_error">Http error</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="back_button">Back</string>
+    <string name="profiles">Profiles</string>
+    <string name="profile">Profile</string>
+    <string name="open_info">Open card</string>
+    <string name="close_info">Close card</string>
+    <string name="main_info">Main</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="birth_day">Date of birth</string>
+    <string name="age">Age</string>
+    <string name="contacts">Contacts</string>
+    <string name="email">Mail</string>
+    <string name="open_email">Open mail</string>
+    <string name="cell_phone">Cell Phone</string>
+    <string name="open_call">Open dialer</string>
+    <string name="phone">Phone</string>
+    <string name="nationality">Nationality</string>
+    <string name="location">Location</string>
+    <string name="open_map">Open map</string>
+    <string name="time_zone">Timezone</string>
+    <string name="document">Document</string>
+    <string name="profile_info">Info about user</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register_date">Date of registration</string>
+    <string name="register_age">Account age</string>
+    <string name="address">Address</string>
+    <string name="coordinates">Coordinates</string>
+</resources>

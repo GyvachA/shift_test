@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name" translatable="false">shift_test</string>
+    <string name="profile_photo">Фото профиля</string>
+    <string name="no_internet_connection">Нет соединения с интернетом</string>
+    <string name="query_timeout">Превышено время ожидания сервера</string>
+    <string name="http_error">Ошибка http</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+    <string name="back_button">Назад</string>
+    <string name="profiles">Профили</string>
+    <string name="profile">Профиль</string>
+    <string name="open_info">Открыть карточку</string>
+    <string name="close_info">Закрыть карточку</string>
+    <string name="main_info">Основное</string>
+    <string name="name">Имя</string>
+    <string name="gender">Пол</string>
+    <string name="birth_day">День рождения</string>
+    <string name="age">Возраст</string>
+    <string name="contacts">Контакты</string>
+    <string name="email">Почта</string>
+    <string name="open_email">Открыть почту</string>
+    <string name="cell_phone">Телефон</string>
+    <string name="open_call">Открыть набор номера</string>
+    <string name="phone">Домашний телефон</string>
+    <string name="nationality">Национальность</string>
+    <string name="location">Местоположение</string>
+    <string name="open_map">Открыть карту</string>
+    <string name="time_zone">Временная зона</string>
+    <string name="document">Документ</string>
+    <string name="profile_info">Информация о пользователе</string>
+    <string name="uuid" translatable="false">uuid</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="salt" translatable="false">salt</string>
+    <string name="md5" translatable="false">md5</string>
+    <string name="sha1" translatable="false">sha1</string>
+    <string name="sha256" translatable="false">sha256</string>
+    <string name="register_date">Дата регистрации</string>
+    <string name="register_age">Возраст аккаунта</string>
+    <string name="address">Адрес</string>
+    <string name="coordinates">Координаты</string>
+</resources>
